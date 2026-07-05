@@ -1,0 +1,160 @@
+.calendar-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.calendar-header {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  background: #f1f5ff;
+  border-radius: 6px;
+}
+
+.calendar-cell {
+  height: 70px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calendar-cell:hover {
+  transform: scale(1.05);
+}
+
+/* TODAY */
+.calendar-cell.today {
+  background: #dcecff;
+  border: 2px solid #0a66c2;
+}
+
+/* LEAVE COLORS */
+.approved {
+  background: #d4f8d4 !important;
+  border: 2px solid #4caf50;
+}
+.pending {
+  background: #fff3cd !important;
+  border: 2px solid #ffbf00;
+}
+.rejected {
+  background: #ffd6d6 !important;
+  border: 2px solid #e60000;
+}
+
+.calendar-empty {
+  visibility: hidden;
+}
+
+/* TOOLTIP */
+.calendar-tooltip {
+  display: none;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%, -105%);
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  width: 150px;
+  text-align: left;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+}
+
+.calendar-cell:hover .calendar-tooltip {
+  display: block;
+}
+
+/* LEGEND */
+.calendar-legend {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.legend-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.legend-box.approved {
+  background: #d4f8d4;
+  border: 2px solid #4caf50;
+}
+.legend-box.pending {
+  background: #fff3cd;
+  border: 2px solid #ffbf00;
+}
+.legend-box.rejected {
+  background: #ffd6d6;
+  border: 2px solid #e60000;
+}
+.legend-box.today {
+  background: #dcecff;
+  border: 2px solid #0a66c2;
+}
+
+/* Month Navigation */
+.nav-btn {
+  background: #0a66c2;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 6px;
+  margin: 0 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #084a92;
+}
+
+/* Weekend Colors */
+.sunday {
+  background: #ffdddd !important;
+  color: #b50000;
+}
+
+.saturday {
+  background: #dde9ff !important;
+  color: #003b91;
+}
+
+/* Indian Holiday */
+.holiday {
+  background: #ffe3b3 !important;
+  border: 1px solid #ff9800 !important;
+  position: relative;
+}
+
+.holiday span {
+  font-weight: bold;
+  color: #d87a00;
+}

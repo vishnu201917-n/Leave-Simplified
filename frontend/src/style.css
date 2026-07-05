@@ -1,0 +1,319 @@
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f6fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #0a66c2;
+}
+
+/* Buttons */
+button {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #0a66c2;
+  color: white;
+  border-radius: 4px;
+}
+
+button.reject {
+  background-color: #c0392b;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #0a66c2;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* ================= LOGIN PAGE ================= */
+.login-page {
+  height: 100vh;
+  background: linear-gradient(135deg, #0066cc, #0052a3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  background: white;
+  width: 480px;
+  padding: 50px 45px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.login-container .logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0a66c2;
+  margin-bottom: 25px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 15px;
+  font-size: 17px;
+  background: #0a66c2;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.login-container button:hover {
+  background: #084a92;
+}
+
+.forgot-link {
+  margin-top: 12px;
+  display: block;
+  color: #0a66c2;
+  font-size: 15px;
+}
+
+.contact-hr {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 260px;
+  background: #0b3d6b;
+  color: white;
+  padding-top: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 22px;
+  font-size: 16px;
+  color: white;
+}
+
+.sidebar a:hover {
+  background: #0a65b5;
+}
+
+/* ================= HEADER ================= */
+.top-header {
+  width: 100%;
+  background: #0a66c2;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #e63946;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  background: #c72e3a;
+}
+
+/* ================= MAIN AREA ================= */
+.app-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-area {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* ================= DASHBOARD CARDS ================= */
+.card-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.stat-title {
+  color: #0a66c2;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.stat-value {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* FIX FLEX BUG ON PROFILE PAGE */
+.profile-wrapper {
+  align-items: flex-start !important;
+}
+
+
+.avatar-circle {
+  width: 120px !important;
+  height: 120px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  background: #0a66c2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+
+/* ================= TABLE BOX ================= */
+.table-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* ================= LEAVE FORM ================= */
+.leave-form {
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  max-width: 900px;
+  margin: 30px auto;
+  font-size: 17px;
+}
+
+.leave-form label {
+  font-weight: 600;
+  margin-top: 14px;
+  display: block;
+  font-size: 16px;
+}
+
+.leave-form input,
+.leave-form select,
+.leave-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #b5b5b5;
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+.date-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.btn-primary {
+  background: #0a66c2;
+  color: white;
+  padding: 14px 20px;
+  width: 200px;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background: #084a92;
+}
+
+.file-upload {
+  padding: 12px;
+  border: 2px dashed #0a66c2;
+  border-radius: 8px;
+  background: #f1f7ff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.file-upload:hover {
+  border-color: #084a92;
+}
+
+.profile-avatar {
+  align-items: center !important;
+}
+
+.avatar-circle {
+  width: 120px !important;
+  height: 120px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+}
+
+
